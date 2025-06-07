@@ -30,6 +30,12 @@ export default {
       description: 'A brief description about yourself and your expertise'
     },
     {
+      name: 'about',
+      title: 'About',
+      type: 'text',
+      description: 'A brief description about yourself'
+    },
+    {
       name: 'profileImage',
       title: 'Profile Image',
       type: 'image',
@@ -42,6 +48,12 @@ export default {
       title: 'Resume',
       type: 'file',
       description: 'Upload your resume in PDF format'
+    },
+    {
+      name: 'experience',
+      title: 'Experience',
+      type: 'string',
+      description: 'Your experience'
     },
     {
       name: 'email',
@@ -58,9 +70,28 @@ export default {
     {
       name: 'address',
       title: 'Address',
-      type: 'geopoint',
-      description: 'Your address'
-    }, 
+      type: 'object',
+      fields: [
+        {
+          name: 'city',
+          title: 'City',
+          type: 'string',
+          description: 'Your city'
+        },
+        {
+          name: 'state',
+          title: 'State',
+          type: 'string',
+          description: 'Your state'
+        },
+        {
+          name: 'country',
+          title: 'Country',
+          type: 'string',
+          description: 'Your country'
+        }
+      ]
+    },
     {
       name: 'socialLinks',
       title: 'Social Links',
@@ -90,6 +121,18 @@ export default {
           ]
         }
       ]
+    },
+    {
+      name: 'languages',
+      title: 'Languages',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'availability',
+      title: 'Availability',
+      type: 'string',
+      description: 'Your availability'
     }
   ]
 }
