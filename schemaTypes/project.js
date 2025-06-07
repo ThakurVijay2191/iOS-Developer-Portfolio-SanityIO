@@ -42,6 +42,12 @@ export default {
         name: 'appStoreLink',
         title: 'App Store Link',
         type: 'url',
-      }
+      },
+      {
+        name: 'order',
+        title: 'Order',
+        type: 'number',
+        validation: (Rule) => Rule.required(),
+      },
     ],
   }
